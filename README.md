@@ -88,17 +88,6 @@ npx serve .
 
 Y abrir `http://localhost:8080` en el navegador.
 
-### Opción C — Despliegue público en GitHub Pages
-
-1. Crear un repositorio nuevo en GitHub (por ejemplo `precios-carburantes`).
-2. Subir los ficheros `index.html`, `styles.css` y `app.js` a la rama `main`.
-3. En el repositorio, ir a **Settings → Pages**.
-4. En *Source* seleccionar **Deploy from a branch** → rama `main`, carpeta `/ (root)`.
-5. Pulsar *Save*. En 1-2 minutos la URL pública estará disponible en
-   `https://<usuario>.github.io/<repo>/`.
-
-No requiere ningún `package.json`, `Dockerfile` ni configuración adicional.
-
 ---
 
 ## 4. Operaciones (manual de uso)
@@ -117,8 +106,6 @@ ver los resultados en la tabla**.
    **Ver** que abre la ubicación de la estación en Google Maps.
 5. La cabecera muestra el total de estaciones devueltas y la fecha del dato.
 
-> _[CAPTURA 01 — Pestaña "Estaciones por CCAA" con resultados para una comunidad seleccionada]_
-
 ### 4.2. Postes marítimos por provincia
 
 1. Cambiar a la pestaña **"Postes marítimos por provincia"**.
@@ -131,7 +118,6 @@ ver los resultados en la tabla**.
 4. La tabla muestra: *Rótulo, Puerto, Dirección, Municipio, Provincia, Horario,
    Gasolina 95 E5, Gasoleo A, Gasoleo B, Gasóleo marítimo* y enlace al mapa.
 
-> _[CAPTURA 02 — Pestaña "Postes marítimos por provincia" con resultados para una provincia costera]_
 
 ### 4.3. Precios por provincia / fecha / carburante
 
@@ -147,7 +133,6 @@ ver los resultados en la tabla**.
    medio**, y la tabla está ordenada de **menor a mayor precio**, de modo que
    las estaciones más baratas aparecen arriba.
 
-> _[CAPTURA 03 — Pestaña "Precios por provincia/fecha/carburante" con filtros aplicados y resultados]_
 
 ---
 
