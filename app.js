@@ -51,7 +51,11 @@ function parsePrice(raw) {
 
 function formatPrice(raw) {
     const n = parsePrice(raw);
-    return n == null ? "—" : `${n.toFixed(3)} €`;
+    if (n == null) return "—";
+    // La API publica casi todos los precios en €/L, pero Gasoleo B en postes marítimos
+    // (gasóleo profesional pesquero) viene en €/m³. Distinguimos por magnitud.
+    const unit = n > 50 ? "€/m³" : "€/L";
+    return `${n.toFixed(3)} ${unit}`;
 }
 
 // Fecha YYYY-MM-DD del input HTML → DD-MM-YYYY que pide la API
@@ -300,11 +304,12 @@ function renderPrecios(container, data, contexto, nombreProducto) {
         return pa - pb;
     });
 
+    const unit = max != null && max > 50 ? "€/m³" : "€/L";
     const stats =
         min != null
-            ? `<span>Mín: <strong>${min.toFixed(3)} €</strong> · Máx: <strong>${max.toFixed(
+            ? `<span>Mín: <strong>${min.toFixed(3)} ${unit}</strong> · Máx: <strong>${max.toFixed(
                   3
-              )} €</strong> · Medio: <strong>${avg.toFixed(3)} €</strong></span>`
+              )} ${unit}</strong> · Medio: <strong>${avg.toFixed(3)} ${unit}</strong></span>`
             : "";
 
     const rows = ordenadas

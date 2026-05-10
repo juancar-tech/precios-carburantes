@@ -180,11 +180,24 @@ hay claves de API, no hay configuración de CORS por nuestra parte.
 El input HTML `<input type="date">` devuelve `AAAA-MM-DD`, pero la API espera
 `DD-MM-AAAA`. La conversión se hace en `toApiDate()` (`app.js`).
 
-### 5.3. Conversión de precios
+### 5.3. Conversión de precios y unidades
 
 Los precios llegan como cadena con coma decimal española (`"1,599"`). Se
-parsean a número en `parsePrice()` y se muestran con tres decimales y el
-símbolo `€` mediante `formatPrice()`.
+parsean a número en `parsePrice()` y se muestran con tres decimales mediante
+`formatPrice()`.
+
+La API utiliza dos unidades distintas que la app distingue automáticamente
+por magnitud:
+
+- **€/L** — caso general (todas las gasolinas, gasoleo A, etc.). Valores en
+  el rango ~0.8 – 3 €/L.
+- **€/m³** — caso especial: el **Gasoleo B** en postes marítimos se publica
+  en €/m³ porque es el gasóleo profesional subvencionado para la flota
+  pesquera, que se factura a Aduanas por metros cúbicos. Valores típicos
+  ~900 – 1100 €/m³ (≈ 0.9 – 1.1 €/L).
+
+`formatPrice()` aplica la heurística *valor > 50 → €/m³, si no → €/L* y
+muestra el sufijo correspondiente, evitando mostrar "1013 €" sin contexto.
 
 ### 5.4. Caso especial del campo `IDPovincia`
 
