@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precios Carburantes - Consulta API Ministerio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>Precios de Carburantes</h1>
+        <p class="subtitle">Consulta de estaciones, postes marítimos e histórico de precios &middot; Datos: Ministerio para la Transición Ecológica</p>
+    </header>
+
+    <main class="container">
+        <nav class="tabs" role="tablist">
+            <button class="tab active" data-tab="estaciones" role="tab" aria-selected="true">Estaciones por CCAA</button>
+            <button class="tab" data-tab="postes" role="tab" aria-selected="false">Postes marítimos por provincia</button>
+            <button class="tab" data-tab="precios" role="tab" aria-selected="false">Precios por provincia / fecha / carburante</button>
+        </nav>
+
+        <!-- =============================== TAB 1: ESTACIONES POR CCAA =============================== -->
+        <section id="tab-estaciones" class="tab-panel active" role="tabpanel">
+            <form id="form-estaciones" class="filter-form">
+                <div class="field">
+                    <label for="select-ccaa">Comunidad autónoma</label>
+                    <select id="select-ccaa" required>
+                        <option value="">Cargando...</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Buscar estaciones</button>
+            </form>
+
+            <div id="result-estaciones" class="result-area">
+                <p class="hint">Selecciona una comunidad autónoma y pulsa <strong>Buscar estaciones</strong>.</p>
+            </div>
+        </section>
+
+        <!-- =============================== TAB 2: POSTES MARÍTIMOS POR PROVINCIA =============================== -->
+        <section id="tab-postes" class="tab-panel" role="tabpanel">
+            <form id="form-postes" class="filter-form">
+                <div class="field">
+                    <label for="select-prov-postes">Provincia</label>
+                    <select id="select-prov-postes" required>
+                        <option value="">Cargando...</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Buscar postes marítimos</button>
+            </form>
+
+            <div id="result-postes" class="result-area">
+                <p class="hint">Selecciona una provincia (recomendado: una costera) y pulsa <strong>Buscar postes marítimos</strong>.</p>
+            </div>
+        </section>
+
+        <!-- =============================== TAB 3: PRECIOS POR PROVINCIA / FECHA / CARBURANTE =============================== -->
+        <section id="tab-precios" class="tab-panel" role="tabpanel">
+            <form id="form-precios" class="filter-form filter-form-3col">
+                <div class="field">
+                    <label for="select-prov-precios">Provincia</label>
+                    <select id="select-prov-precios" required>
+                        <option value="">Cargando...</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="input-fecha">Fecha</label>
+                    <input type="date" id="input-fecha" required />
+                </div>
+                <div class="field">
+                    <label for="select-producto">Carburante</label>
+                    <select id="select-producto" required>
+                        <option value="">Cargando...</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Consultar precios</button>
+            </form>
+
+            <div id="result-precios" class="result-area">
+                <p class="hint">Selecciona provincia, fecha y carburante. La API guarda histórico desde hace varios años.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            Datos en tiempo real desde
+            <a href="https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/help" target="_blank" rel="noopener">la API REST del Ministerio</a>.
+            Aplicación de práctica académica.
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

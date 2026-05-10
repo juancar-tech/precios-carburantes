@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="proj-precios-carburantes-0001" activeEnvironment="Default" name="PreciosCarburantes" resourceRoot="" soapui-version="5.9.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="iface-precios-carburantes-0001" wadlVersion="http://wadl.dev.java.net/2009/02" name="PreciosCarburantesAPI" type="rest" basePath="/ServiciosRestCarburantes/PreciosCarburantes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+    </con:endpoints>
+
+    <!-- =========================================================
+         EstacionesTerrestres
+         ========================================================= -->
+    <con:resource name="EstacionesTerrestres" path="/EstacionesTerrestres/" id="res-et-001">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET EstacionesTerrestres" id="m-et-001" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-et-001" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestres - FiltroCCAA" path="/EstacionesTerrestres/FiltroCCAA/{IDCCAA}" id="res-et-002">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDCCAA</con:name><con:value>01</con:value><con:style>TEMPLATE</con:style><con:default>01</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestres FiltroCCAA" id="m-et-002" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="https://energia.serviciosmin.gob.es/ServiciosRestCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroCCAA/08">ns:Response</con:element></con:representation><con:request name="Request 1" id="r-et-002" mediaType="application/json">
+          <con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://energia.serviciosmin.gob.es/ServiciosRestCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroCCAA/08</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters><entry key="IDCCAA" value="08" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+          <con:parameterOrder><con:entry>IDCCAA</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestres - FiltroCCAAProducto" path="/EstacionesTerrestres/FiltroCCAAProducto/{IDCCAA}/{IDProducto}" id="res-et-003">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDCCAA</con:name><con:value>01</con:value><con:style>TEMPLATE</con:style><con:default>01</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestres FiltroCCAAProducto" id="m-et-003" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-et-003" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDCCAA" value="01"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDCCAA</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestres - FiltroMunicipio" path="/EstacionesTerrestres/FiltroMunicipio/{IDMunicipio}" id="res-et-004">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDMunicipio</con:name><con:value>5347</con:value><con:style>TEMPLATE</con:style><con:default>5347</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestres FiltroMunicipio" id="m-et-004" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-et-004" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDMunicipio" value="5347"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDMunicipio</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestres - FiltroMunicipioProducto" path="/EstacionesTerrestres/FiltroMunicipioProducto/{IDMunicipio}/{IDProducto}" id="res-et-005">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDMunicipio</con:name><con:value>5347</con:value><con:style>TEMPLATE</con:style><con:default>5347</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestres FiltroMunicipioProducto" id="m-et-005" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-et-005" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDMunicipio" value="5347"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDMunicipio</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestres - FiltroProducto" path="/EstacionesTerrestres/FiltroProducto/{IDProducto}" id="res-et-006">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestres FiltroProducto" id="m-et-006" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-et-006" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestres - FiltroProvincia" path="/EstacionesTerrestres/FiltroProvincia/{IDProvincia}" id="res-et-007">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDProvincia</con:name><con:value>28</con:value><con:style>TEMPLATE</con:style><con:default>28</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestres FiltroProvincia" id="m-et-007" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-et-007" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDProvincia" value="28"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDProvincia</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestres - FiltroProvinciaProducto" path="/EstacionesTerrestres/FiltroProvinciaProducto/{IDProvincia}/{IDProducto}" id="res-et-008">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDProvincia</con:name><con:value>28</con:value><con:style>TEMPLATE</con:style><con:default>28</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestres FiltroProvinciaProducto" id="m-et-008" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-et-008" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDProvincia" value="28"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDProvincia</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <!-- =========================================================
+         EstacionesTerrestresHist (Historico)
+         ========================================================= -->
+    <con:resource name="EstacionesTerrestresHist - Fecha" path="/EstacionesTerrestresHist/{FECHA}" id="res-eth-001">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist" id="m-eth-001" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-001" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestresHist - FiltroCCAA" path="/EstacionesTerrestresHist/FiltroCCAA/{FECHA}/{IDCCAA}" id="res-eth-002">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+        <con:parameter><con:name>IDCCAA</con:name><con:value>01</con:value><con:style>TEMPLATE</con:style><con:default>01</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist FiltroCCAA" id="m-eth-002" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-002" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+            <con:entry key="IDCCAA" value="01"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry><con:entry>IDCCAA</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestresHist - FiltroCCAAProducto" path="/EstacionesTerrestresHist/FiltroCCAAProducto/{FECHA}/{IDCCAA}/{IDProducto}" id="res-eth-003">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+        <con:parameter><con:name>IDCCAA</con:name><con:value>01</con:value><con:style>TEMPLATE</con:style><con:default>01</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist FiltroCCAAProducto" id="m-eth-003" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-003" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+            <con:entry key="IDCCAA" value="01"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry><con:entry>IDCCAA</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestresHist - FiltroMunicipio" path="/EstacionesTerrestresHist/FiltroMunicipio/{FECHA}/{IDMunicipio}" id="res-eth-004">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+        <con:parameter><con:name>IDMunicipio</con:name><con:value>5347</con:value><con:style>TEMPLATE</con:style><con:default>5347</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist FiltroMunicipio" id="m-eth-004" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-004" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+            <con:entry key="IDMunicipio" value="5347"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry><con:entry>IDMunicipio</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestresHist - FiltroMunicipioProducto" path="/EstacionesTerrestresHist/FiltroMunicipioProducto/{FECHA}/{IDMunicipio}/{IDProducto}" id="res-eth-005">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+        <con:parameter><con:name>IDMunicipio</con:name><con:value>5347</con:value><con:style>TEMPLATE</con:style><con:default>5347</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist FiltroMunicipioProducto" id="m-eth-005" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-005" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+            <con:entry key="IDMunicipio" value="5347"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry><con:entry>IDMunicipio</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestresHist - FiltroProducto" path="/EstacionesTerrestresHist/FiltroProducto/{FECHA}/{IDProducto}" id="res-eth-006">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist FiltroProducto" id="m-eth-006" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-006" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestresHist - FiltroProvincia" path="/EstacionesTerrestresHist/FiltroProvincia/{FECHA}/{IDProvincia}" id="res-eth-007">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+        <con:parameter><con:name>IDProvincia</con:name><con:value>28</con:value><con:style>TEMPLATE</con:style><con:default>28</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist FiltroProvincia" id="m-eth-007" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-007" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+            <con:entry key="IDProvincia" value="28"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry><con:entry>IDProvincia</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="EstacionesTerrestresHist - FiltroProvinciaProducto" path="/EstacionesTerrestresHist/FiltroProvinciaProducto/{FECHA}/{IDProvincia}/{IDProducto}" id="res-eth-008">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>FECHA</con:name><con:value>01-01-2024</con:value><con:style>TEMPLATE</con:style><con:default>01-01-2024</con:default></con:parameter>
+        <con:parameter><con:name>IDProvincia</con:name><con:value>28</con:value><con:style>TEMPLATE</con:style><con:default>28</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET EstacionesTerrestresHist FiltroProvinciaProducto" id="m-eth-008" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-eth-008" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="FECHA" value="01-01-2024"/>
+            <con:entry key="IDProvincia" value="28"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>FECHA</con:entry><con:entry>IDProvincia</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <!-- =========================================================
+         PostesMaritimos
+         ========================================================= -->
+    <con:resource name="PostesMaritimos" path="/PostesMaritimos/" id="res-pm-001">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET PostesMaritimos" id="m-pm-001" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-001" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="PostesMaritimos - FiltroCCAA" path="/PostesMaritimos/FiltroCCAA/{IDCCAA}" id="res-pm-002">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDCCAA</con:name><con:value>01</con:value><con:style>TEMPLATE</con:style><con:default>01</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET PostesMaritimos FiltroCCAA" id="m-pm-002" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-002" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDCCAA" value="01"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDCCAA</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="PostesMaritimos - FiltroCCAAProducto" path="/PostesMaritimos/FiltroCCAAProducto/{IDCCAA}/{IDProducto}" id="res-pm-003">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDCCAA</con:name><con:value>01</con:value><con:style>TEMPLATE</con:style><con:default>01</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET PostesMaritimos FiltroCCAAProducto" id="m-pm-003" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-003" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDCCAA" value="01"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDCCAA</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="PostesMaritimos - FiltroMunicipio" path="/PostesMaritimos/FiltroMunicipio/{IDMunicipio}" id="res-pm-004">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDMunicipio</con:name><con:value>5347</con:value><con:style>TEMPLATE</con:style><con:default>5347</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET PostesMaritimos FiltroMunicipio" id="m-pm-004" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-004" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDMunicipio" value="5347"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDMunicipio</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="PostesMaritimos - FiltroMunicipioProducto" path="/PostesMaritimos/FiltroMunicipioProducto/{IDMunicipio}/{IDProducto}" id="res-pm-005">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDMunicipio</con:name><con:value>5347</con:value><con:style>TEMPLATE</con:style><con:default>5347</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET PostesMaritimos FiltroMunicipioProducto" id="m-pm-005" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-005" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDMunicipio" value="5347"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDMunicipio</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="PostesMaritimos - FiltroProducto" path="/PostesMaritimos/FiltroProducto/{IDProducto}" id="res-pm-006">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET PostesMaritimos FiltroProducto" id="m-pm-006" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-006" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="PostesMaritimos - FiltroProvincia" path="/PostesMaritimos/FiltroProvincia/{IDProvincia}" id="res-pm-007">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDProvincia</con:name><con:value>28</con:value><con:style>TEMPLATE</con:style><con:default>28</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET PostesMaritimos FiltroProvincia" id="m-pm-007" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-007" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDProvincia" value="28"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDProvincia</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="PostesMaritimos - FiltroProvinciaProducto" path="/PostesMaritimos/FiltroProvinciaProducto/{IDProvincia}/{IDProducto}" id="res-pm-008">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDProvincia</con:name><con:value>28</con:value><con:style>TEMPLATE</con:style><con:default>28</con:default></con:parameter>
+        <con:parameter><con:name>IDProducto</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET PostesMaritimos FiltroProvinciaProducto" id="m-pm-008" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-pm-008" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDProvincia" value="28"/>
+            <con:entry key="IDProducto" value="1"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDProvincia</con:entry><con:entry>IDProducto</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <!-- =========================================================
+         Listados (Datos maestros)
+         ========================================================= -->
+    <con:resource name="Listados - ComunidadesAutonomas" path="/Listados/ComunidadesAutonomas/" id="res-li-001">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET ComunidadesAutonomas" id="m-li-001" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-li-001" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="Listados - Municipios" path="/Listados/Municipios/" id="res-li-002">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET Municipios" id="m-li-002" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-li-002" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="Listados - MunicipiosPorProvincia" path="/Listados/MunicipiosPorProvincia/{IDProvincia}" id="res-li-003">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDProvincia</con:name><con:value>28</con:value><con:style>TEMPLATE</con:style><con:default>28</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET MunicipiosPorProvincia" id="m-li-003" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-li-003" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDProvincia" value="28"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDProvincia</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="Listados - ProductosPetroliferos" path="/Listados/ProductosPetroliferos/" id="res-li-004">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET ProductosPetroliferos" id="m-li-004" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-li-004" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="Listados - Provincias" path="/Listados/Provincias/" id="res-li-005">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET Provincias" id="m-li-005" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-li-005" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+    <con:resource name="Listados - ProvinciasPorComunidad" path="/Listados/ProvinciasPorComunidad/{IDCCAA}" id="res-li-006">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter><con:name>IDCCAA</con:name><con:value>01</con:value><con:style>TEMPLATE</con:style><con:default>01</con:default></con:parameter>
+      </con:parameters>
+      <con:method name="GET ProvinciasPorComunidad" id="m-li-006" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:params/></con:representation>
+        <con:request name="Request 1" id="r-li-006" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://energia.serviciosmin.gob.es</con:endpoint>
+          <con:request/>
+          <con:credentials><con:authType>No Authorization</con:authType></con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="IDCCAA" value="01"/>
+          </con:parameters>
+          <con:parameterOrder><con:entry>IDCCAA</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+
+  </con:interface>
+
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
